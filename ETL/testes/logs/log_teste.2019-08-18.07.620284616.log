@@ -1,0 +1,15 @@
+/home/rubencruzh/Downloads/data-integration
+2019/08/18 22:33:12 - Kitchen - Start of run.
+2019/08/18 22:33:19 - job_teste - Início da execução do job
+2019/08/18 22:33:19 - job_teste - Starting entry [ktr_teste]
+2019/08/18 22:33:19 - ktr_teste - Loading transformation from XML file [/home/visao/ETL/testes/ktr_teste.ktr]
+2019/08/18 22:33:19 - ktr_teste - Expedindo in�cio para transforma��o [ktr_teste]
+2019/08/18 22:33:19 - Data Grid.0 - Finished processing (I=0, O=0, R=0, W=3, U=0, E=0)
+2019/08/18 22:33:19 - Text file output.0 - Finished processing (I=0, O=4, R=3, W=3, U=0, E=0)
+2019/08/18 22:33:20 - job_teste - Starting entry [Success]
+2019/08/18 22:33:20 - job_teste - Finished job entry [Success] (result=[true])
+2019/08/18 22:33:20 - job_teste - Finished job entry [ktr_teste] (result=[true])
+2019/08/18 22:33:20 - job_teste - Job execution finished
+2019/08/18 22:33:20 - Kitchen - Finished!
+2019/08/18 22:33:20 - Kitchen - Start=2019/08/18 22:33:12.329, Stop=2019/08/18 22:33:20.004
+2019/08/18 22:33:20 - Kitchen - Processing ended after 7 seconds.

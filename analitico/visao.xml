@@ -1,0 +1,64 @@
+<Schema name="Visao">
+  <Cube name="Visao" visible="true" cache="true" enabled="true">
+    <Table name="fato_visao" schema="fato">
+    </Table>
+    <Dimension type="TimeDimension" visible="true" foreignKey="sk_tempo" highCardinality="false" name="Tempo">
+      <Hierarchy name="Tempo" visible="true" hasAll="true" primaryKey="sk_tempo">
+        <Table name="dim_tempo" schema="dimensao">
+        </Table>
+        <Level name="Ano" visible="true" column="sk_tempo" nameColumn="ano" type="Integer" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sk_categoria" highCardinality="false" name="Categoria">
+      <Hierarchy name="Categoria" visible="true" hasAll="true" primaryKey="sk_categoria">
+        <Table name="dim_categoria" schema="dimensao">
+        </Table>
+        <Level name="Categoria" visible="true" column="sk_categoria" nameColumn="nome_categoria" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sk_indicador" highCardinality="false" name="Indicador">
+      <Hierarchy name="Indicador" visible="true" hasAll="true" primaryKey="sk_indicador">
+        <Table name="dim_indicador" schema="dimensao">
+        </Table>
+        <Level name="Indicador" visible="true" column="sk_indicador" nameColumn="nome_indicador" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sk_municipio" highCardinality="false" name="Municipio">
+      <Hierarchy name="Municipio" visible="true" hasAll="true" primaryKey="sk_municipio">
+        <Table name="dim_municipio" schema="dimensao">
+        </Table>
+        <Level name="Municipio" visible="true" column="sk_municipio" nameColumn="nome_municipio" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sk_uf" highCardinality="false" name="UF">
+      <Hierarchy name="UF" visible="true" hasAll="true" primaryKey="sk_uf">
+        <Table name="dim_uf" schema="dimensao">
+        </Table>
+        <Level name="UF" visible="true" table="dim_uf" column="sk_uf" nameColumn="uf" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sk_regiao" highCardinality="false" name="Regiao">
+      <Hierarchy name="Regiao" visible="true" hasAll="true" primaryKey="sk_regiao">
+        <Table name="dim_regiao" schema="dimensao">
+        </Table>
+        <Level name="Regiao" visible="true" table="dim_regiao" column="sk_regiao" nameColumn="nome_regiao" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sk_usuario" highCardinality="false" name="Usuario">
+      <Hierarchy name="Usuario" visible="true" hasAll="true" primaryKey="sk_usuario">
+        <Table name="dim_usuario" schema="dimensao">
+        </Table>
+        <Level name="Usuario" visible="true" column="sk_usuario" nameColumn="nome_usuario" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Indicador-Valor" column="value_indicador" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
